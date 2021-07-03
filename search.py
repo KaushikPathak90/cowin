@@ -25,34 +25,34 @@ class Cowin:
         self.driver.get("https://www.cowin.gov.in/home")
         # Launch the URL
         self.driver.maximize_window()
-        self.driver.save_screenshot("./image" + get_date_time() + ".png")
+        self.driver.save_screenshot("./images/image" + get_date_time() + ".png")
 
         time.sleep(2)
-        self.driver.find_element(By.XPATH, "/html/body/app-root/div/app-home/div[2]/div/appointment-table/div/div/div/div/div/div/div/div/div/div/form/mat-tab-group/mat-tab-header/div[2]/div/div/div[3]/div").click()
-        self.driver.find_element(By.XPATH, "/html/body/app-root/div/app-home/div[2]/div/appointment-table/div/div/div/div/div/div/div/div/div/div/form/mat-tab-group/div/mat-tab-body[3]/div/div/div[1]/mat-form-field/div/div[1]/div/mat-select/div/div[2]").click()
-        self.driver.find_element(By.XPATH, "/html/body/div[2]/div[2]/div/div/div/mat-option[37]/span").click()                                                                                                                         
+        self.driver.find_element(By.XPATH, "/html/body/app-root/div/app-home/div[3]/div/appointment-table/div/div/div/div/div/div/div/div/div/div/form/mat-tab-group/mat-tab-header/div[2]/div/div/div[2]/div").click()
+        #Search by District
+        self.driver.find_element(By.XPATH, "/html/body/app-root/div/app-home/div[3]/div/appointment-table/div/div/div/div/div/div/div/div/div/div/form/mat-tab-group/div/mat-tab-body[2]/div/div/div[1]/mat-form-field/div/div[1]/div/mat-select/div/div[2]").click()
+        self.driver.find_element(By.XPATH, "/html/body/div[2]/div[2]/div/div/div/mat-option[37]/span").click()
         #West Bengal
         time.sleep(1)
-        self.driver.save_screenshot("./image" + get_date_time() + ".png")
+        self.driver.save_screenshot("./images/mage" + get_date_time() + ".png")
 
         time.sleep(2)
-        self.driver.find_element(By.XPATH, "/html/body/app-root/div/app-home/div[2]/div/appointment-table/div/div/div/div/div/div/div/div/div/div/form/mat-tab-group/div/mat-tab-body[3]/div/div/div[2]/mat-form-field/div/div[1]/div/mat-select/div/div[2]/div").click()
+        self.driver.find_element(By.XPATH, "/html/body/app-root/div/app-home/div[3]/div/appointment-table/div/div/div/div/div/div/div/div/div/div/form/mat-tab-group/div/mat-tab-body[2]/div/div/div[2]/mat-form-field/div/div[1]/div/mat-select/div/div[2]/div").click()
         self.driver.find_element(By.XPATH, "/html/body/div[2]/div[2]/div/div/div/mat-option[29]/span").click()
         #West Bardhaman
         time.sleep(1)
-        self.driver.save_screenshot("./image" + get_date_time() + ".png")
+        self.driver.save_screenshot("./images/mage" + get_date_time() + ".png")
 
     def search(self):            
 
-        self.driver.find_element(By.XPATH, "/html/body/app-root/div/app-home/div[2]/div/appointment-table/div/div/div/div/div/div/div/div/div/div/form/mat-tab-group/div/mat-tab-body[3]/div/div/div[3]/button").click() 
+        self.driver.find_element(By.XPATH, "/html/body/app-root/div/app-home/div[3]/div/appointment-table/div/div/div/div/div/div/div/div/div/div/form/mat-tab-group/div/mat-tab-body[2]/div/div/div[3]/button").click()
         #Search
 
-        self.driver.find_element(By.XPATH, "/html/body/app-root/div/app-home/div[2]/div/appointment-table/div/div/div/div/div/div/div/div/div/div/div[2]/form/div/div/div[2]/div[1]/div/div[1]/label").click() 
+        self.driver.find_element(By.XPATH, "/html/body/app-root/div/app-home/div[3]/div/appointment-table/div/div/div/div/div/div/div/div/div/div/div[2]/form/div/div/div[2]/div[1]/div/div[1]/label").click() 
         #Age 18+
 
 
-#n = 100000
-n = 5
+n = 1000000
 bot = Cowin()
 try:
     i = 1
@@ -63,7 +63,7 @@ try:
         if i == 1:
             for _ in range(10):
                 bot.driver.find_element(By.XPATH,"/html").send_keys(Keys.ARROW_DOWN)
-        bot.driver.save_screenshot("./image" + get_date_time() + ".png")
+        bot.driver.save_screenshot("./images/mage" + get_date_time() + ".png")
         i += 1
         if i > n:
             break
